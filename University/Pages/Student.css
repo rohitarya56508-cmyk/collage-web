@@ -1,0 +1,176 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ================= SLIDER ================= */
+
+        .slider-deepu {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-size: cover;
+            flex-shrink: 0;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #fff;
+        }
+
+        .overlay h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .overlay p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn-deepu {
+            background: #f4b400;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* ================= TESTIMONIAL SECTION ================= */
+
+        .student-section {
+            padding: 50px 10%;
+            background: #f2f2f2;
+        }
+
+        .student-heading {
+            font-size: 32px;
+            color: #0a2c7d;
+            margin-bottom: 30px;
+        }
+
+        .student-box {
+            background: #cfd8e6;
+            padding: 30px;
+            margin-bottom: 30px;
+            height: 200px;
+            position: relative;
+            border-radius: 5px;
+        }
+
+        .student-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .student-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .student-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .student-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #222;
+        }
+
+        .student-name {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #0a2c7d;
+        }
+
+        .student-info {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #666;
+            color: #fff;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        /* ================= GALLERY SECTION ================= */
+
+        .gallery-section {
+            padding: 50px 10%;
+            background: #fff;
+            text-align: center;
+        }
+
+        .gallery-heading {
+            font-size: 32px;
+            color: #0a2c7d;
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
