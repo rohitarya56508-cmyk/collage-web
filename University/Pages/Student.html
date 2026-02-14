@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Testimonials Slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ================= SLIDER ================= */
+
+        .slider-deepu {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-size: cover;
+            flex-shrink: 0;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #fff;
+        }
+
+        .overlay h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .overlay p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn-deepu {
+            background: #f4b400;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* ================= TESTIMONIAL SECTION ================= */
+
+        .student-section {
+            padding: 50px 10%;
+            background: #f2f2f2;
+        }
+
+        .student-heading {
+            font-size: 32px;
+            color: #0a2c7d;
+            margin-bottom: 30px;
+        }
+
+        .student-box {
+            background: #cfd8e6;
+            padding: 30px;
+            margin-bottom: 30px;
+            height: 200px;
+            position: relative;
+            border-radius: 5px;
+        }
+
+        .student-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .student-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .student-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .student-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #222;
+        }
+
+        .student-name {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #0a2c7d;
+        }
+
+        .student-info {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #666;
+            color: #fff;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        /* ================= GALLERY SECTION ================= */
+
+        .gallery-section {
+            padding: 50px 10%;
+            background: #fff;
+            text-align: center;
+        }
+
+        .gallery-heading {
+            font-size: 32px;
+            color: #0a2c7d;
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= SLIDER ================= -->
+
+    <div class="slider-deepu">
+        <div class="slider-wrapper">
+            <img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/26-scaled.jpeg" class="slider-image"
+                alt="Slide 1">
+            <img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/25-scaled.jpeg" class="slider-image"
+                alt="Slide 2">
+            <img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/48.jpeg" class="slider-image" alt="Slide 3">
+            <img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/8.jpeg" class="slider-image" alt="Slide 4">
+            <img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/49.jpeg" class="slider-image" alt="Slide 5">
+        </div>
+        <div class="overlay">
+            <h1>Student Testimonials</h1>
+            <p>See what our happy students are saying</p>
+            <div class="btn-deepu">ALUMNI DETAILS</div>
+        </div>
+    </div>
+
+    <!-- ================= TESTIMONIAL SECTION ================= -->
+
+    <div class="student-section">
+
+        <div class="student-heading">Voices of Our Students</div>
+
+        <!-- Testimonial 1 -->
+        <div class="student-box">
+            <div class="quote-icon">"</div>
+
+            <div class="student-content">
+                <div class="student-img">
+                    <img src="https://www.cksvim.edu.in/wp-content/uploads/2025/12/pratham.jpg" alt="Student">
+                </div>
+
+                <div>
+                    <div class="student-text">
+                        My journey at C. K. Shah Vijapurwala Institute of Management has been life-changing.
+                        Beyond academics, the faculty offereNd constant guidance, mentorship, and emotional support
+                        during tough times.
+                    </div>
+
+                    <div class="student-name">Pratham Kansara</div>
+                    <div class="student-info">MBA (Batch 2023-25), Petroexcel Technology Services (P)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="student-box">
+            <div class="quote-icon">"</div>
+
+            <div class="student-content">
+                <div class="student-img">
+                    <img src="https://www.cksvim.edu.in/wp-content/uploads/2025/12/Gemini_Generated_Image_c8g85fc8g85fc8g8.png" alt="Student">
+                </div>
+
+                <div>
+                    <div class="student-text">
+                        I’ve grown not just professionally but personally.
+                        The faculty’s constant support and real-world exposure have shaped my career vision.
+                    </div>
+
+                    <div class="student-name">Dev Padariya</div>
+                    <div class="student-info">MBA (Batch 2023-25), Axis Bank Ltd.</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Testimonial 3 -->
+        <div class="student-box">
+            <div class="quote-icon">"</div>
+
+            <div class="student-content">
+                <div class="student-img">
+                    <img src="https://www.cksvim.edu.in/wp-content/uploads/2025/12/Janhvavi.png" alt="Student">
+                </div>
+
+                <div>
+                    <div class="student-text">
+                        C. K. Shah Vijapurwala Institute of Management has truly shaped my professional journey. The
+                        supportive faculty, industry exposure, and real-world learning experiences have boosted my
+                        confidence and prepared me for corporate success.
+                    </div>
+
+                    <div class="student-name">Janhavi Thakkar</div>
+                    <div class="student-info">MBA(Batch -2023-25), Stemmons Business Services Pvt.Ltd</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Testimonial 4 -->
+        <div class="student-box">
+            <div class="quote-icon">"</div>
+
+            <div class="student-content">
+                <div class="student-img">
+                    <img src="https://www.cksvim.edu.in/wp-content/uploads/2025/12/BHAVESH-MOTIRAY.png" alt="Student">
+                </div>
+
+                <div>
+                    <div class="student-text">
+
+                        Studying at C K Shah Vijapurwala Institute of Management has been a transformative journey. The
+                        experienced faculty, practical learning approach, and industry exposure have equipped me with
+                        strong managerial skills. The institute fosters leadership, innovation, and growth—truly
+                        preparing us to excel in the dynamic world of business.
+                    </div>
+
+                    <div class="student-name">Bhavesh Motiray</div>
+                    <div class="student-info">MBA(Batch -2023-25), Gujarat Minerals Industries</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Testimonial 5 -->
+        <div class="student-box">
+            <div class="quote-icon">"</div>
+
+            <div class="student-content">
+                <div class="student-img">
+                    <img src="https://www.cksvim.edu.in/wp-content/uploads/2025/12/khushi-1.jpg" alt="Student">
+                </div>
+
+                <div>
+                    <div class="student-text">
+                        As MBA students at C.K. Shah Vijapurwala Institute of Management, we’ve gained valuable industry
+                        insights, practical skills, and strong academic support. The institute’s dynamic environment,
+                        expert faculty, and focus on holistic development have truly shaped our professional journey and
+                        prepared us to excel in the competitive business world.
+                    </div>
+
+                    <div class="student-name">Khushi Vaze</div>
+                    <div class="student-info">MBA(Batch -2023-25), Gujarat Minerals Industries</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Testimonial 6 -->
+        <div class="student-box">
+            <div class="quote-icon">"</div>
+
+            <div class="student-content">
+                <div class="student-img">
+                    <img src="https://www.cksvim.edu.in/wp-content/uploads/2025/12/AAYUSH-BELSARE.png" alt="Student">
+                </div>
+
+                <div>
+                    <div class="student-text">
+                        The infrastructure and challenging work environment at CKSVIM helped me step out of my comfort
+                        zone and apply what I learned during my MBA. The college provided opportunities to enhance my
+                        skills and enrich my knowledge. The interactive faculty made classes exciting and were very
+                        supportive throughout the journey. My personality has undergone a remarkable transformation,
+                        thanks to the constant encouragement and guidance from the institute staff
+                    </div>
+
+                    <div class="student-name">Aayush Belsare</div>
+                    <div class="student-info">MBA(Batch -2023-25), Dhyey Consulting Services Pvt Ltd.</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Testimonial 7 -->
+        <div class="student-box">
+            <div class="quote-icon">"</div>
+
+            <div class="student-content">
+                <div class="student-img">
+                    <img src="https://www.cksvim.edu.in/wp-content/uploads/2025/12/DARSHI-SHAH.jpg" alt="Student">
+                </div>
+
+                <div>
+                    <div class="student-text">
+                        CKSVIM has transformed me both personally and professionally. The industry exposure, supportive
+                        faculty, and practical learning environment have prepared me to step confidently into the
+                        corporate world.
+                    </div>
+
+                    <div class="student-name">Darshi Shah</div>
+                    <div class="student-info">MBA(Batch -2023-25), MiR Collections</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Testimonial 8 -->
+        <div class="student-box">
+            <div class="quote-icon">"</div>
+
+            <div class="student-content">
+                <div class="student-img">
+                    <img src="https://www.cksvim.edu.in/wp-content/uploads/2023/01/Labdhi-Shah.jpg" alt="Student">
+                </div>
+
+                <div>
+                    <div class="student-text">
+                        I am Labdhi Shah, a pass out of 2022 batch of C. K. Shah Vijapurwala Institute of Management
+                        affiliated by Gujarat Technological University & currently working with Inferenz as a Jr. HR
+                        Executive it’s an IT firm wherein we provide services to our clients and we do have our own
+                        products.
+                    </div>
+
+                    <div class="student-name">Labdhi Shah</div>
+                    <div class="student-info">Jr. HR Executive, Inferenz</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= STUDENT GALLERY ================= -->
+
+    <div class="gallery-section">
+        <div class="gallery-heading">Student Life Gallery</div>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/26-scaled.jpeg" alt="Gallery 1"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/25-scaled.jpeg" alt="Gallery 2"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/48.jpeg" alt="Gallery 3"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/8.jpeg" alt="Gallery 4"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/49.jpeg" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/11.jpeg" alt="Gallery 6"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/15.jpeg" alt="Gallery 7"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/14.jpeg" alt="Gallery 8"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/17.jpeg" alt="Gallery 9"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/24.jpeg" alt="Gallery 10"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/21.jpeg" alt="Gallery 11"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/27.jpeg" alt="Gallery 12"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/28.jpeg" alt="Gallery 13"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/31.jpeg" alt="Gallery 14"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/34-scaled.jpeg" alt="Gallery 15"></div>
+            <div class="gallery-item"><img src="https://www.cksvim.edu.in/wp-content/uploads/2026/01/35.jpeg" alt="Gallery 16"></div>
+        </div>
+    </div>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+
+    <script>
+        const wrapper = document.querySelector('.slider-wrapper');
+        const slides = document.querySelectorAll('.slider-image');
+        let slideIndex = 0;
+
+        setInterval(() => {
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            wrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }, 3000); // Change image every 3 seconds
+    </script>
+</body>
+
+</html>
