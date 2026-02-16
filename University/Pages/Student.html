@@ -3,10 +3,101 @@
 
 <head>
     <title>Student </title>
+
+     <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
     <link rel="stylesheet" href="Student.css">
 </head>
 
 <body>
+
+
+
+       <!-- Top Bar -->
+    <div class="topbar">
+      <div class="left">
+        <span>📞 +91 9924556363</span>
+        <span>✉ admission@cksvim.edu.in</span>
+      </div>
+      <div class="right">
+        <a href="#">NIRF</a>
+        <a href="#">Print Media</a>
+        <a href="#">Training & Placement</a>
+        <a href="#">Alumni Club</a>
+        <a href="#">Events & Activities</a>
+        <a href="#">Gallery</a>
+        <a href="#">Careers @ CKSVIM</a>
+      </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar">
+      <!-- LOGO (Reusable) -->
+      <div class="logo">
+        <img src="./images/image/logo image.png" alt="Logo" />
+      </div>
+
+      <!-- Menu -->
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About </a></li>
+        <li><a href="#">Courses </a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Student</a></li>
+      </ul>
+
+      <!-- Button -->
+      <div class="apply-btn">
+        <a href="#">Apply Now</a>
+      </div>
+    </nav>
+
+
+
+
+    <!-- ================= CONTACT FORM ================= -->
+
+       <div class="right-contact-main-container" id="contactBar">
+      <div class="contact-side-button contact-arrow-button" id="toggleArrow">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+
+      <div class="d" id="d">
+        <div
+          class="contact-side-button contact-us-button" id="contactHoverButton">
+          <span>Contact Us</span>
+        </div>
+
+        <div class="contact-side-button contact-messenger-button">
+          <i class="fa-brands fa-facebook-messenger"></i>
+        </div>
+
+        <div class="contact-side-button contact-phone-button">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="contact-form-popup-container" id="contactForm">
+      <div class="contact-form-box">
+        <div class="contact-form-header">
+          <h2>Contact Form</h2>
+          <span class="contact-form-close" id="closeForm">&times;</span>
+        </div>
+
+        <input type="text" placeholder="Name*" required />
+        <input type="tel" placeholder="Phone*" required />
+        <input type="email" placeholder="Email*" required />
+        <textarea placeholder="Message"></textarea>
+        <button>Submit</button>
+      </div>
+    </div>
+
 
     <!-- ================= SLIDER ================= -->
 
@@ -316,6 +407,48 @@
         currentIndex = (currentIndex + 1) % sliderImages.length;
         showSlide(currentIndex);
     }, 3000); // Change slide every 3 seconds
+
+
+
+
+    // side contect form
+      const contactHoverButton = document.getElementById("contactHoverButton");
+      const contactForm = document.getElementById("contactForm");
+      const closeForm = document.getElementById("closeForm");
+
+      contactHoverButton.addEventListener("mouseenter", () => {
+        contactForm.classList.add("active");
+      });
+
+      contactForm.addEventListener("mouseleave", () => {
+        contactForm.classList.remove("active");
+      });
+
+      closeForm.addEventListener("click", () => {
+        contactForm.classList.remove("active");
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleArrow = document.getElementById("toggleArrow");
+        const contactBar = document.getElementById("contactBar");
+
+        toggleArrow.addEventListener("click", function () {
+          contactBar.classList.toggle("expanded");
+
+          const icon = toggleArrow.querySelector("i");
+
+          if (contactBar.classList.contains("expanded")) {
+            icon.classList.remove("fa-arrow-right");
+            icon.classList.add("fa-arrow-left");
+            d.style.display = "none";
+            contactBar.style.top = "50%";
+          } else {
+            icon.classList.remove("fa-arrow-left");
+            icon.classList.add("fa-arrow-right");
+            d.style.display = "block";
+            contactBar.style.top = "30%";
+          }
+        });
+      });
   </script>
 </body>
 
