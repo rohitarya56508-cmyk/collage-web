@@ -73,6 +73,30 @@
             font-size: 32px;
             color: #0a2c7d;
             margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+
+        #Animasion{
+            width:60px;
+            height: 10px;
+            background: #000000;
+            border-radius: 50px;
+            animation: moveLine 3s infinite ease-in-out;
+        }
+
+        @keyframes moveLine {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(30px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
         }
 
         .student-box {
@@ -149,6 +173,7 @@
             font-size: 32px;
             color: #0a2c7d;
             margin-bottom: 30px;
+            font-weight: bold;
         }
 
         .gallery-grid {
@@ -173,4 +198,79 @@
 
         .gallery-item:hover img {
             transform: scale(1.1);
+        }
+
+        /* ================= ABOUT STUDENTS SECTION ================= */
+
+        .about-student-section {
+            padding: 50px 10%;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .about-student-heading {
+            font-size: 32px;
+            color: #0a2c7d;
+            margin-bottom: 30px;
+        }
+
+        .about-student-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* ================= CLUBS & ACTIVITIES ================= */
+
+        .clubs-section {
+            padding: 50px 10%;
+            background: #eef2f5;
+            text-align: center;
+        }
+
+        .clubs-heading {
+            font-size: 32px;
+            color: #0a2c7d;
+            margin-bottom: 40px;
+            /* font-style: italic; */
+            font-weight: bold;
+            /* font-style: bold; */
+        }
+
+        .clubs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .club-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .club-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .club-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .club-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #0a2c7d;
+            margin-bottom: 15px;
+        }
+
+        .club-desc {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
         }

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Student Testimonials Slider</title>
+    <title>Student </title>
     <link rel="stylesheet" href="Student.css">
 </head>
 
@@ -31,7 +31,12 @@
 
     <div class="student-section">
 
-        <div class="student-heading">Voices of Our Students</div>
+        <div class="student-heading">Voices of Our Students
+            <div id="Animasion"></div>
+        </div>
+
+
+        
 
         <!-- Testimonial 1 -->
         <div class="student-box">
@@ -272,22 +277,46 @@
         </div>
     </div>
 
-    <!-- ================= JAVASCRIPT ================= -->
+    <!-- ================= CLUBS & ACTIVITIES ================= -->
 
+    <div class="clubs-section">
+        <div class="clubs-heading">Student Clubs & Activities</div>
+        <div class="clubs-grid">
+            <!-- Club 1 -->
+            <div class="club-card">
+                <div class="club-icon">🎭</div>
+                <div class="club-title">Cultural Club</div>
+                <div class="club-desc">Organizing dance, music, and drama events to showcase student talent and celebrate diversity.</div>
+            </div>
+            <!-- Club 2 -->
+            <div class="club-card">
+                <div class="club-icon">⚽</div>
+                <div class="club-title">Sports Club</div>
+                <div class="club-desc">Promoting physical fitness through inter-college tournaments, cricket, football, and indoor games.</div>
+            </div>
+            <!-- Club 3 -->
+            <div class="club-card">
+                <div class="club-icon">💻</div>
+                <div class="club-title">Tech & Innovation</div>
+                <div class="club-desc">A hub for coding, hackathons, and workshops on the latest technologies and startups.</div>
+            </div>
+    </div>
 
-    <script>
-        const wrapper = document.querySelector('.slider-wrapper');
-        const slides = document.querySelectorAll('.slider-image');
-        let slideIndex = 0;
+  <script>
+    // Simple slider functionality
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const sliderImages = document.querySelectorAll('.slider-image');
+    let currentIndex = 0;
 
-        setInterval(() => {
-            slideIndex++;
-            if (slideIndex >= slides.length) {
-                slideIndex = 0;
-            }
-            wrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
-        }, 3000); // Change image every 3 seconds
-    </script>
+    function showSlide(index) {
+        sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % sliderImages.length;
+        showSlide(currentIndex);
+    }, 3000); // Change slide every 3 seconds
+  </script>
 </body>
 
 </html>
