@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;    
+}
+.Apply-Main{
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    background-image: url("../image/istockphoto-1916729901-612x612.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding-top: 80px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.Apply-Main, h1{
+    font-size: 45px;
+}
+
+.Apply-btn{
+    margin-top: 20px;
+    width: 170px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(233, 162, 32);
+    font-size: 17px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
