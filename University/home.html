@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navbar</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: sans-serif;
-      }
-       .right-contact-main-container {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .right-contact-main-container {
             position: fixed;
             transition: 2s;
             right: 0;
@@ -106,7 +108,7 @@
             right: -100%;
             width: 400px;
             height: 100vh;
-           
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -176,111 +178,113 @@
                 width: 100%;
             }
         }
-      /* TOP BAR */
-      .topbar {
-        background: #1e2a78;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        padding: 8px 20px;
-        font-size: 14px;
-      }
 
-      .topbar .left span {
-        margin-right: 15px;
-        font-weight: bold;
-      }
+        /* TOP BAR */
+        .topbar {
+            background: #1e2a78;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 20px;
+            font-size: 14px;
+        }
 
-      .topbar .right a {
-        color: white;
-        text-decoration: none;
-        margin-left: 15px;
-        font-weight: bold;
-        font-style: normal;
-      }
+        .topbar .left span {
+            margin-right: 15px;
+            font-weight: bold;
+        }
 
-      /* NAVBAR */
-      .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px 20px;
-        background: #f5f5f5;
-      }
+        .topbar .right a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+            font-style: normal;
+        }
 
-      /* LOGO (IMPORTANT PART) */
-      .logo {
-        display: flex;
-        align-items: center;
-       
-      }
-      
-      
-     
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: #f5f5f5;
+        }
 
-      /* MENU */
-      .menu {
-        list-style: none;
-        display: flex;
-        gap: 35px;
-        margin-left: 550px;
-      }
+        /* LOGO (IMPORTANT PART) */
+        .logo {
+            display: flex;
+            align-items: center;
 
-      .menu li a {
-        text-decoration: none;
-        color: #000;
-        font-weight: bold;
-      }
+        }
 
-      /* BUTTON */
-      .apply-btn a {
-        background: #f4b400;
-        padding: 10px 20px;
-        border-radius: 25px;
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-      }
+
+
+
+        /* MENU */
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+            margin-left: 550px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* BUTTON */
+        .apply-btn a {
+            background: #f4b400;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- Top Bar -->
     <div class="topbar">
-      <div class="left">
-        <span>📞 +91 9924556363</span>
-        <span>✉ admission@cksvim.edu.in</span>
-      </div>
-      <div class="right">
-        <a href="#">NIRF</a>
-        <a href="#">Print Media</a>
-        <a href="#">Training & Placement</a>
-        <a href="#">Alumni Club</a>
-        <a href="#">Events & Activities</a>
-        <a href="#">Gallery</a>
-        <a href="#">Careers @ CKSVIM</a>
-      </div>
+        <div class="left">
+            <span>📞 +91 9924556363</span>
+            <span>✉ admission@cksvim.edu.in</span>
+        </div>
+        <div class="right">
+            <a href="#">NIRF</a>
+            <a href="#">Print Media</a>
+            <a href="#">Training & Placement</a>
+            <a href="#">Alumni Club</a>
+            <a href="#">Events & Activities</a>
+            <a href="#">Gallery</a>
+            <a href="#">Careers @ CKSVIM</a>
+        </div>
     </div>
 
     <!-- Main Navbar -->
     <nav class="navbar">
-      <!-- LOGO (Reusable) -->
-      <div class="logo">
-        <img src=".//image/Global_Institute_Simple_Logo-removebg-preview.png" alt="Logo" />
-      </div>
+        <!-- LOGO (Reusable) -->
+        <div class="logo">
+            <img src=".//image/Global_Institute_Simple_Logo-removebg-preview.png" alt="Logo" />
+        </div>
 
-      <!-- Menu -->
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About </a></li>
-        <li><a href="#">Courses </a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Student</a></li>
-      </ul>
+        <!-- Menu -->
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About </a></li>
+            <li><a href="#">Courses </a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Student</a></li>
+        </ul>
 
-      <!-- Button -->
-      <div class="apply-btn">
-        <a href="#">Apply Now</a>
-      </div>
+        <!-- Button -->
+        <div class="apply-btn">
+            <a href="#">Apply Now</a>
+        </div>
     </nav>
     <div class="right-contact-main-container" id="contactBar">
 
@@ -325,50 +329,50 @@
         </div>
 
     </div>
-  </body>
-  <script>
-   const contactHoverButton = document.getElementById("contactHoverButton");
-        const contactForm = document.getElementById("contactForm");
-        const closeForm = document.getElementById("closeForm");
+</body>
+<script>
+    const contactHoverButton = document.getElementById("contactHoverButton");
+    const contactForm = document.getElementById("contactForm");
+    const closeForm = document.getElementById("closeForm");
 
-        contactHoverButton.addEventListener("mouseenter", () => {
-            contactForm.classList.add("active");
-        });
+    contactHoverButton.addEventListener("mouseenter", () => {
+        contactForm.classList.add("active");
+    });
 
-        contactForm.addEventListener("mouseleave", () => {
-            contactForm.classList.remove("active");
-        });
+    contactForm.addEventListener("mouseleave", () => {
+        contactForm.classList.remove("active");
+    });
 
-        closeForm.addEventListener("click", () => {
-            contactForm.classList.remove("active");
-        });
-        document.addEventListener("DOMContentLoaded", function () {
+    closeForm.addEventListener("click", () => {
+        contactForm.classList.remove("active");
+    });
+    document.addEventListener("DOMContentLoaded", function () {
 
-            const toggleArrow = document.getElementById("toggleArrow");
-            const contactBar = document.getElementById("contactBar");
+        const toggleArrow = document.getElementById("toggleArrow");
+        const contactBar = document.getElementById("contactBar");
 
-            toggleArrow.addEventListener("click", function () {
+        toggleArrow.addEventListener("click", function () {
 
-                contactBar.classList.toggle("expanded");
+            contactBar.classList.toggle("expanded");
 
-                const icon = toggleArrow.querySelector("i");
+            const icon = toggleArrow.querySelector("i");
 
-                if (contactBar.classList.contains("expanded")) {
-                    icon.classList.remove("fa-arrow-right");
-                    icon.classList.add("fa-arrow-left");
-                    d.style.display = "none";
-                    contactBar.style.top="50%";
-                } else {
-                    icon.classList.remove("fa-arrow-left");
-                    icon.classList.add("fa-arrow-right");
-                    d.style.display = "block";
-                   contactBar.style.top="30%";
-                }
-
-            });
+            if (contactBar.classList.contains("expanded")) {
+                icon.classList.remove("fa-arrow-right");
+                icon.classList.add("fa-arrow-left");
+                d.style.display = "none";
+                contactBar.style.top = "50%";
+            } else {
+                icon.classList.remove("fa-arrow-left");
+                icon.classList.add("fa-arrow-right");
+                d.style.display = "block";
+                contactBar.style.top = "30%";
+            }
 
         });
 
-    </script>
+    });
+
+</script>
 
 </html>
