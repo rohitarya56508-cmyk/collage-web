@@ -1,15 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;    
+    font-family: 'Segoe UI', sans-serif;
 }
-.Apply-Main{
+
+.Apply-Main {
     width: 100%;
     height: 300px;
     justify-content: center;
-    background-image: url("../image/istockphoto-1916729901-612x612.jpg");
-    background-size:cover;
+    background-image: url("../images/image/istockphoto-1916729901-612x612.jpg");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
@@ -18,11 +19,12 @@
     color: #ffffff;
 }
 
-.Apply-Main, h1{
+.Apply-Main,
+h1 {
     font-size: 45px;
 }
 
-.Apply-btn{
+.Apply-btn {
     margin-top: 20px;
     width: 170px;
     height: 40px;
@@ -34,3 +36,127 @@
     outline: none;
     cursor: pointer;
 }
+
+.Shape-content {
+    margin-left: 100px;
+    margin-top: 300px;
+}
+
+.Shape-content,
+h3 {
+    color: rgb(2, 2, 128);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.Shape-content,
+h2 {
+    color: rgb(82, 79, 79);
+    font-size: 30px;
+}
+
+.x-animetion {
+    width: 50px;
+    height: 8px;
+    background: #000000;
+    border-radius: 50px;
+    animation: moveLine 3s infinite ease-in-out;
+    margin-top: 10px;
+}
+
+@keyframes moveLine {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.form-section{
+    background: linear-gradient(to right,#bacdd4,#adcddb);
+    padding:20px;
+    width:90%;
+    margin:30px auto;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+label{
+    font-size:16px;
+    color:#1b3c4d;
+    font-weight:600;
+}
+
+.required{
+    color:red;
+}
+
+input, select{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border:3px solid #797777;
+    outline:none;
+    font-size:16px;
+}
+
+.row{
+    display:flex;
+    gap:20px;
+}
+
+.row .form-group{
+    flex:1;
+}
+
+.radio-group{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-top:8px;
+}
+
+.radio-group input{
+    width:auto;
+}
+
+.contact-input{
+    border:4px solid #76777a;
+    padding:12px;
+    margin-top:5px;
+}
+
+.send-btn{
+    background:#1c2fa3;
+    color:white;
+    padding:15px 55px;
+    border:none;
+    cursor:pointer;
+    margin-top:15px;
+    margin-left: 450px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.send-btn:hover{
+    background:#16257a;
+}
+
+
+
+
+
+
+
+
+
