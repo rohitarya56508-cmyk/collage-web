@@ -1,0 +1,161 @@
+.right-contact-main-container {
+        position: fixed;
+        transition: 2s;
+        right: 0;
+        top: 30%;
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+      }
+
+      /* Common Button Style */
+      .contact-side-button {
+        width: 250px;
+        /* Full width fix */
+        height: 60px;
+        display: flex;
+        align-items: center;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+        position: relative;
+        right: -190px;
+        /* 250 - 60 */
+        padding-left: 20px;
+      }
+
+      .contact-side-button i {
+        min-width: 40px;
+        text-align: center;
+      }
+
+      /* Arrow */
+      .contact-arrow-button {
+        background: black;
+        border-radius: 20px 0 0 0;
+      }
+
+      /* CONTACT US (Yellow) */
+      .contact-us-button {
+        background: #f4b731;
+        height: 160px;
+        border-radius: 0;
+        position: relative;
+      }
+
+      .contact-us-button span {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-weight: bold;
+      }
+
+      /* Messenger */
+      .contact-messenger-button {
+        background: #1877f2;
+      }
+
+      /* Phone */
+      .contact-phone-button {
+        background: #25d366;
+        border-radius: 0 0 0 20px;
+      }
+
+      /* Hover Width Expand for Messenger & Phone */
+      .contact-messenger-button:hover,
+      .contact-phone-button:hover {
+        width: 170px;
+        transform: translateX(-100px);
+        /* 250 - 60 = 190 */
+        justify-content: flex-start;
+        padding-left: 20px;
+      }
+
+      .contact-messenger-button:hover::after {
+        content: "Chat With Us";
+        margin-left: 15px;
+        font-weight: bold;
+      }
+
+      .contact-phone-button:hover::after {
+        content: "Call Us Now";
+        margin-left: 15px;
+        font-weight: bold;
+      }
+
+      /* ================= CONTACT FORM ================= */
+
+      .contact-form-popup-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 400px;
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s;
+        z-index: 999;
+      }
+
+      .contact-form-popup-container.active {
+        right: 29px;
+      }
+
+      .contact-form-box {
+        width: 90%;
+        background: rgb(192, 192, 192);
+        padding: 25px;
+        border-radius: 15px;
+      }
+
+      .contact-form-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .contact-form-header h2 {
+        color: #1e73be;
+      }
+
+      .contact-form-close {
+        font-size: 22px;
+        cursor: pointer;
+      }
+
+      /* Form Fields */
+      .contact-form-box input,
+      .contact-form-box textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 25px;
+        border: 1px solid #ddd;
+        outline: none;
+      }
+
+      .contact-form-box textarea {
+        height: 100px;
+        border-radius: 15px;
+        resize: none;
+      }
+
+      .contact-form-box button {
+        width: 100%;
+        padding: 15px;
+        background: #23227c;
+
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      /* Responsive */
+      @media (max-width: 500px) {
+        .contact-form-popup-container {
+          width: 100%;
+        }
+      }
