@@ -7,6 +7,123 @@
     <link rel="stylesheet" href="./Apply.css">
 </head>
 <body>
+
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./smallcontact.css">
+    
+</head>
+<body>
+    
+       <!-- Top Bar -->
+    <div class="topbar">
+      <div class="left">
+        <span>📞 +91 9924556363</span>
+        <span>✉ admission@cksvim.edu.in</span>
+      </div>
+      <div class="right">
+        <a href="#">NIRF</a>
+        <a href="#">Print Media</a>
+        <a href="#">Training & Placement</a>
+        <a href="#">Alumni Club</a>
+        <a href="#">Events & Activities</a>
+        <a href="#">Gallery</a>
+        <a href="#">Careers @ CKSVIM</a>
+      </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar">
+      <!-- LOGO (Reusable) -->
+      <div class="logo">
+        <img src="../images/image/logo image.png" alt="Logo" />
+      </div>
+
+      <!-- Menu -->
+      <ul class="menu">
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="./about.html">About </a></li>
+        <li><a href="./courses.html">Courses </a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./student.html">Student</a></li>
+      </ul>
+
+      <!-- Button -->
+      <div class="apply-btn">
+        <a href="./Apply.html">Apply Now</a>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+     
+
+    <div class="right-contact-main-container" id="contactBar">
+      <div class="contact-side-button contact-arrow-button" id="toggleArrow">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+
+      <div class="d" id="d">
+        <div
+          class="contact-side-button contact-us-button" id="contactHoverButton">
+          <span>Contact Us</span>
+        </div>
+
+        <div class="contact-side-button contact-messenger-button">
+          <i class="fa-brands fa-facebook-messenger"></i>
+        </div>
+
+        <div class="contact-side-button contact-phone-button">
+          <i class="fa-solid fa-/cxphone"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= CONTACT FORM ================= -->
+
+    <div class="contact-form-popup-container" id="contactForm">
+      <div class="contact-form-box">
+        <div class="contact-form-header">
+          <h2>Contact Form</h2>
+          <span class="contact-form-close" id="closeForm">&times;</span>
+        </div>
+
+        <input type="text" placeholder="Name*" required />
+        <input type="tel" placeholder="Phone*" required />
+        <input type="email" placeholder="Email*" required />
+        <textarea placeholder="Message"></textarea>
+        <button>Submit</button>
+      </div>
+    </div>
+
+    <script src="./smallcontact.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
     <div class="Apply-Main">
         <h1>Apply Now</h1>
         <button class="Apply-btn"><b>ABOUT CKSVIM</b></button>
