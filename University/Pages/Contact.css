@@ -1,0 +1,535 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .right-contact-main-container {
+        position: fixed;
+        transition: 2s;
+        right: 0;
+        top: 30%;
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+      }
+
+      /* Common Button Style */
+      .contact-side-button {
+        width: 250px;
+        /* Full width fix */
+        height: 60px;
+        display: flex;
+        align-items: center;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+        position: relative;
+        right: -190px;
+        /* 250 - 60 */
+        padding-left: 20px;
+      }
+
+      .contact-side-button i {
+        min-width: 40px;
+        text-align: center;
+      }
+
+      /* Arrow */
+      .contact-arrow-button {
+        background: black;
+        border-radius: 20px 0 0 0;
+      }
+
+      /* CONTACT US (Yellow) */
+      .contact-us-button {
+        background: #f4b731;
+        height: 160px;
+        border-radius: 0;
+        position: relative;
+      }
+
+      .contact-us-button span {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-weight: bold;
+      }
+
+      /* Messenger */
+      .contact-messenger-button {
+        background: #1877f2;
+      }
+
+      /* Phone */
+      .contact-phone-button {
+        background: #25d366;
+        border-radius: 0 0 0 20px;
+      }
+
+      /* Hover Width Expand for Messenger & Phone */
+      .contact-messenger-button:hover,
+      .contact-phone-button:hover {
+        width: 170px;
+        transform: translateX(-100px);
+        /* 250 - 60 = 190 */
+        justify-content: flex-start;
+        padding-left: 20px;
+      }
+
+      .contact-messenger-button:hover::after {
+        content: "Chat With Us";
+        margin-left: 15px;
+        font-weight: bold;
+      }
+
+      .contact-phone-button:hover::after {
+        content: "Call Us Now";
+        margin-left: 15px;
+        font-weight: bold;
+      }
+
+      /* ================= CONTACT FORM ================= */
+
+      .contact-form-popup-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 400px;
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s;
+        z-index: 999;
+      }
+
+      .contact-form-popup-container.active {
+        right: 29px;
+      }
+
+      .contact-form-box {
+        width: 90%;
+        background: rgb(192, 192, 192);
+        padding: 25px;
+        border-radius: 15px;
+      }
+
+      .contact-form-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .contact-form-header h2 {
+        color: #1e73be;
+      }
+
+      .contact-form-close {
+        font-size: 22px;
+        cursor: pointer;
+      }
+
+      /* Form Fields */
+      .contact-form-box input,
+      .contact-form-box textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 25px;
+        border: 1px solid #ddd;
+        outline: none;
+      }
+
+      .contact-form-box textarea {
+        height: 100px;
+        border-radius: 15px;
+        resize: none;
+      }
+
+      .contact-form-box button {
+        width: 100%;
+        padding: 15px;
+        background: #23227c;
+
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      /* Responsive */
+      @media (max-width: 500px) {
+        .contact-form-popup-container {
+          width: 100%;
+        }
+      }
+      /* TOP BAR */
+      .topbar {
+        background: #1e2a78;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 20px;
+        font-size: 14px;
+      }
+
+      .topbar .left span {
+        margin-right: 15px;
+        font-weight: bold;
+      }
+
+      .topbar .right a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        background: #f5f5f5;
+        height: 80px;
+      }
+
+      /* LOGO (IMPORTANT PART) */
+      .logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      /* 👇 YEH MAIN CONTROL HAI LOGO KA */
+      .logo img {
+        height: 140px; /* bas isko change karo */
+        width: auto;
+        object-fit: contain;
+      }
+
+      /* MENU */
+      .menu {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin-left: 550px;
+      }
+
+      .menu li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+      }
+
+      /* BUTTON */
+      .apply-btn a {
+        background: #f4b400;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+    
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    background-image: url("	https://www.cksvim.edu.in/wp-content/uploads/2022/11/bvoc.png");
+
+}
+
+
+
+/* ===== Fees Payment Section ===== */
+.fees-section{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url('https://www.cksvim.edu.in/wp-content/uploads/2022/12/CKSVIM-Fees-Payment.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Dark Overlay */
+.fees-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+}
+
+/* Content */
+.fees-content{
+    position: relative;
+    max-width: 800px;
+    padding: 20px;
+    
+}
+
+.fees-content h1{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.fees-content p{
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Button */
+.fees-btn{
+    display: inline-block;
+    padding: 14px 35px;
+    background: #f4b400;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.fees-btn:hover{
+    background: #d99a00;
+}
+
+
+
+
+
+
+
+/* ===== Section ===== */
+.bank-section{
+    padding: 80px 10%;
+    background: #f8f8f8;
+}
+
+/* Container */
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* Left Side */
+.bank-left{
+    flex: 1;
+}
+
+.bank-left h4{
+    color: #1e2a78;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.bank-left h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.underline{
+    width: 50px;
+    height: 6px;
+    background: #000;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.bank-left p{
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Table */
+.bank-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.bank-table td{
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.bank-table tr:nth-child(odd){
+    background: #efefef;
+}
+
+.bank-table td:first-child{
+    font-weight: bold;
+    width: 35%;
+}
+
+/* Right Side */
+.bank-right{
+    width: 400px;
+    text-align: center;
+    margin-top: 150px;
+    margin-right: 5px;
+}
+.bank-right img{
+    width: 350px;
+}
+
+.qr{
+    width: 280px;
+    margin-bottom: 20px;
+}
+
+
+
+/* ===== Responsive ===== */
+@media(max-width: 992px){
+    .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bank-left{
+        text-align: left;
+    }
+
+    .bank-right{
+        margin-top: 40px;
+    }
+}
+
+
+
+/* ===== Hero Section ===== */
+.contact-hero{
+    width:100%;
+    height:300px;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://static-cse.canva.com/blob/1374739/40examplestohelpyoubuildtheperfectcontactuspage.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+}
+
+.contact-hero h1{
+    font-size:42px;
+    font-weight:600;
+}
+
+/* ===== Main Section ===== */
+.contact-section{
+    width:100%;
+    padding:80px 10%;
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    background:white;
+}
+
+/* Left Info */
+.contact-info{
+    flex:1;
+    min-width:300px;
+}
+
+.contact-info h2{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    margin-bottom:15px;
+    color:#555;
+}
+
+.contact-info div{
+    margin-bottom:15px;
+    font-weight:500;
+}
+
+/* Right Form */
+.contact-form{
+    flex:1;
+    min-width:300px;
+    background:#f9f9f9;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form h2{
+    margin-bottom:25px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px 15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    outline:none;
+    transition:0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#007bff;
+}
+
+.contact-form button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#007bff;
+    color:white;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    background:#0056b3;
+}
+
+/* ===== Map Section ===== */
+.map-section{
+    width:100%;
+    height:1000px;
+}
+
+.map-section iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .contact-section{
+        padding:50px 5%;
+    }
+}

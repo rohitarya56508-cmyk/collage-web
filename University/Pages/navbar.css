@@ -1,0 +1,92 @@
+
+      /* TOP BAR */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      .topbar {
+        background: #1e2a78;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 20px;
+        font-size: 14px;
+      }
+
+      .topbar .left span {
+        margin-right: 15px;
+        font-weight: bold;
+      }
+
+      .topbar .right a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        background: #f5f5f5;
+        height: 80px;
+      }
+
+      /* LOGO (IMPORTANT PART) */
+      .logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      /* 👇 YEH MAIN CONTROL HAI LOGO KA */
+      .logo img {
+        height: 140px; /* bas isko change karo */
+        width: auto;
+        object-fit: contain;
+      }
+
+      /* MENU */
+      .menu {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin-left: 550px;
+      }
+
+      .menu li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+      }
+
+      /* BUTTON */
+      .apply-btn a {
+        background: #f4b400;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+      .hero {
+        display: flex;
+        height: 90vh;
+      }
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 

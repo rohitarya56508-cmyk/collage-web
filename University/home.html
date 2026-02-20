@@ -1,9 +1,33 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navbar</title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .right-contact-main-container {
+            position: fixed;
+            transition: 2s;
+            right: 0;
+            top: 30%;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+=======
+=======
+    
+>>>>>>> 73a69b6047810c523ea2c4f5045ceff0a8a0a2de
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -24,6 +48,7 @@
         flex-direction: column;
         z-index: 1000;
       }
+>>>>>>> 96de1cf9c4fd06fc2c2741932c76d32403c1f870
 
       /* Common Button Style */
       .contact-side-button {
@@ -173,6 +198,83 @@
       /* Responsive */
       @media (max-width: 500px) {
         .contact-form-popup-container {
+<<<<<<< HEAD
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 400px;
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.4s;
+            z-index: 999;
+        }
+
+        .contact-form-popup-container.active {
+            right: 29px;
+
+        }
+
+        .contact-form-box {
+            width: 90%;
+            background: rgb(192, 192, 192);
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .contact-form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-form-header h2 {
+            color: #1e73be;
+        }
+
+        .contact-form-close {
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* Form Fields */
+        .contact-form-box input,
+        .contact-form-box textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .contact-form-box textarea {
+            height: 100px;
+            border-radius: 15px;
+            resize: none;
+        }
+
+        .contact-form-box button {
+            width: 100%;
+            padding: 15px;
+            background: #23227c;
+
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Responsive */
+        @media(max-width:500px) {
+            .contact-form-popup-container {
+                width: 100%;
+            }
+        }
+=======
           width: 100%;
         }
       }
@@ -185,20 +287,46 @@
         padding: 8px 20px;
         font-size: 14px;
       }
+>>>>>>> 96de1cf9c4fd06fc2c2741932c76d32403c1f870
 
-      .topbar .left span {
-        margin-right: 15px;
-        font-weight: bold;
-      }
+        /* TOP BAR */
+        .topbar {
+            background: #1e2a78;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 20px;
+            font-size: 14px;
+        }
 
-      .topbar .right a {
-        color: white;
-        text-decoration: none;
-        margin-left: 15px;
-        font-weight: bold;
-        font-style: normal;
-      }
+        .topbar .left span {
+            margin-right: 15px;
+            font-weight: bold;
+        }
 
+<<<<<<< HEAD
+        .topbar .right a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: #f5f5f5;
+        }
+
+        /* LOGO (IMPORTANT PART) */
+        .logo {
+            display: flex;
+            align-items: center;
+=======
       /* NAVBAR */
       .navbar {
         display: flex;
@@ -230,13 +358,38 @@
         gap: 30px;
         margin-left: 550px;
       }
+>>>>>>> 96de1cf9c4fd06fc2c2741932c76d32403c1f870
 
-      .menu li a {
-        text-decoration: none;
-        color: #000;
-        font-weight: bold;
-      }
+        }
 
+<<<<<<< HEAD
+
+
+
+        /* MENU */
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+            margin-left: 550px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* BUTTON */
+        .apply-btn a {
+            background: #f4b400;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+=======
       /* BUTTON */
       .apply-btn a {
         background: #f4b400;
@@ -435,46 +588,71 @@
       }
 
      
+>>>>>>> 96de1cf9c4fd06fc2c2741932c76d32403c1f870
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- Top Bar -->
     <div class="topbar">
-      <div class="left">
-        <span>📞 +91 9924556363</span>
-        <span>✉ admission@cksvim.edu.in</span>
-      </div>
-      <div class="right">
-        <a href="#">NIRF</a>
-        <a href="#">Print Media</a>
-        <a href="#">Training & Placement</a>
-        <a href="#">Alumni Club</a>
-        <a href="#">Events & Activities</a>
-        <a href="#">Gallery</a>
-        <a href="#">Careers @ CKSVIM</a>
-      </div>
+        <div class="left">
+            <span>📞 +91 9924556363</span>
+            <span>✉ admission@cksvim.edu.in</span>
+        </div>
+        <div class="right">
+            <a href="#">NIRF</a>
+            <a href="#">Print Media</a>
+            <a href="#">Training & Placement</a>
+            <a href="#">Alumni Club</a>
+            <a href="#">Events & Activities</a>
+            <a href="#">Gallery</a>
+            <a href="#">Careers @ CKSVIM</a>
+        </div>
     </div>
 
     <!-- Main Navbar -->
     <nav class="navbar">
+<<<<<<< HEAD
+        <!-- LOGO (Reusable) -->
+        <div class="logo">
+            <img src=".//image/Global_Institute_Simple_Logo-removebg-preview.png" alt="Logo" />
+        </div>
+=======
       <!-- LOGO (Reusable) -->
       <div class="logo">
         <img src="./images/image/logo image.png" alt="Logo" />
       </div>
+>>>>>>> 96de1cf9c4fd06fc2c2741932c76d32403c1f870
 
+<<<<<<< HEAD
+        <!-- Menu -->
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About </a></li>
+            <li><a href="#">Courses </a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Student</a></li>
+        </ul>
+
+        <!-- Button -->
+        <div class="apply-btn">
+            <a href="#">Apply Now</a>
+        </div>
+=======
       <!-- Menu -->
       <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About </a></li>
-        <li><a href="#">Courses </a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Student</a></li>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./Pages/About.html">About </a></li>
+        <li><a href="./Pages/Courses.html">Courses </a></li>
+        <li><a href="./Pages/Conatct.html">Contact</a></li>
+        <li><a href="./Pages/Student.html">Student</a></li>
       </ul>
 
       <!-- Button -->
       <div class="apply-btn">
-        <a href="#">Apply Now</a>
+        <a href="./Pages/Apply.html">Apply Now</a>
       </div>
+>>>>>>> 73a69b6047810c523ea2c4f5045ceff0a8a0a2de
     </nav>
 
     <section class="hero">
@@ -548,6 +726,55 @@
         <button>Submit</button>
       </div>
     </div>
+<<<<<<< HEAD
+</body>
+<script>
+    const contactHoverButton = document.getElementById("contactHoverButton");
+    const contactForm = document.getElementById("contactForm");
+    const closeForm = document.getElementById("closeForm");
+
+    contactHoverButton.addEventListener("mouseenter", () => {
+        contactForm.classList.add("active");
+    });
+
+    contactForm.addEventListener("mouseleave", () => {
+        contactForm.classList.remove("active");
+    });
+
+    closeForm.addEventListener("click", () => {
+        contactForm.classList.remove("active");
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const toggleArrow = document.getElementById("toggleArrow");
+        const contactBar = document.getElementById("contactBar");
+
+        toggleArrow.addEventListener("click", function () {
+
+            contactBar.classList.toggle("expanded");
+
+            const icon = toggleArrow.querySelector("i");
+
+            if (contactBar.classList.contains("expanded")) {
+                icon.classList.remove("fa-arrow-right");
+                icon.classList.add("fa-arrow-left");
+                d.style.display = "none";
+                contactBar.style.top = "50%";
+            } else {
+                icon.classList.remove("fa-arrow-left");
+                icon.classList.add("fa-arrow-right");
+                d.style.display = "block";
+                contactBar.style.top = "30%";
+            }
+
+        });
+
+    });
+
+</script>
+
+</html>
+=======
 
     <section class="about">
       <!-- LEFT CONTENT -->
@@ -712,3 +939,4 @@
     </script>
   </body>
 </html>
+>>>>>>> 96de1cf9c4fd06fc2c2741932c76d32403c1f870
