@@ -1,0 +1,173 @@
+\
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>College Programs</title>
+    <link rel="stylesheet" href="Courses.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    
+
+    <h1 class="title">Our Programs</h1>
+
+    <div class="course-container">
+
+        <!-- CARD -->
+        <div class="card"
+            onclick="openPopup('B.A','Arts stream covering history, sociology, political science','3 Years','₹18,000 / year')">
+            <div class="imgBox">
+                <img src="https://deshbhagatuniversity.in/wp-content/uploads/2025/09/BA-Full-Form-1.webp">
+                <span class="badge ug">UG</span>
+            </div>
+            <div class="details">
+                <h3>Bachelor of Arts (B.A)</h3>
+                <p>Humanities & Social Science Program</p>
+                <button>View Details</button>
+            </div>
+        </div>
+
+        <div class="card" onclick="openPopup('B.Com','Finance, Accounting & Taxation','3 Years','₹22,000 / year')">
+            <div class="imgBox">
+                <img src="https://rgicdn.s3.ap-south-1.amazonaws.com/ghrcacs/images/blogs/bcom-degree.webp">
+                <span class="badge commerce">Commerce</span>
+            </div>
+            <div class="details">
+                <h3>Bachelor of Commerce</h3>
+                <p>Accounting & Business Finance</p>
+                <button>View Details</button>
+            </div>
+        </div>
+
+        <div class="card" onclick="openPopup('B.Sc','Physics, Chemistry & Maths','3 Years','₹28,000 / year')">
+            <div class="imgBox">
+                <img src="https://indirauniversity.edu.in/_next/image?url=https%3A%2F%2Fcms.indirauniversity.edu.in%2Fwp-content%2Fuploads%2FBachelor-of-Science-in-Economics.jpg&w=1920&q=85">
+                <span class="badge science">Science</span>
+            </div>
+            <div class="details">
+                <h3>Bachelor of Science</h3>
+                <p>Pure Science Degree</p>
+                <button>View Details</button>
+            </div>
+        </div>
+
+        <div class="card" onclick="openPopup('BCA','Software Development & Programming','3 Years','₹35,000 / year')">
+            <div class="imgBox">
+                <img src="https://sdu.ac.in/wp-content/uploads/2024/08/BCA-Course-Eligibilities.jpeg">
+                <span class="badge computer">Computer</span>
+            </div>
+            <div class="details">
+                <h3>Bachelor of Computer Application</h3>
+                <p>Programming & Web Development</p>
+                <button>View Details</button>
+            </div>
+        </div>
+
+        <div class="card" onclick="openPopup('BBA','Management & Marketing','3 Years','₹30,000 / year')">
+            <div class="imgBox">
+                <img src="https://rrimt.ac.in/wp-content/uploads/2025/02/Bachelor-of-Business-Administration-BBA.webp">
+                <span class="badge management">Management</span>
+            </div>
+            <div class="details">
+                <h3>Bachelor of Business Administration</h3>
+                <p>Business & Management</p>
+                <button>View Details</button>
+            </div>
+        </div>
+
+        <div class="card" onclick="openPopup('MBA','Advanced Business Administration','2 Years','₹65,000 / year')">
+            <div class="imgBox">
+                <img src="images/mba.jpg">
+                <span class="badge pg">PG</span>
+            </div>
+            <div class="details">
+                <h3>Master of Business Administration</h3>
+                <p>Leadership & Strategy</p>
+                <button>View Details</button>
+            </div>
+        </div>
+
+        <div class="card" onclick="openPopup('B.Tech','Engineering Degree','4 Years','₹95,000 / year')">
+            <div class="imgBox">
+                <img src="images/btech.jpg">
+                <span class="badge tech">Engineering</span>
+            </div>
+            <div class="details">
+                <h3>Bachelor of Technology</h3>
+                <p>Computer & Mechanical Engineering</p>
+                <button>View Details</button>
+            </div>
+        </div>
+
+        <div class="card" onclick="openPopup('LLB','Law & Legal Studies','3 Years','₹40,000 / year')">
+            <div class="imgBox">
+                <img src="images/llb.jpg">
+                <span class="badge law">Law</span>
+            </div>
+            <div class="details">
+                <h3>Bachelor of Law</h3>
+                <p>Legal Education</p>
+                <button>View Details</button>
+            </div>
+        </div>
+
+        <div class="card" onclick="openPopup('MBBS','Medical Degree','5.5 Years','₹6,50,000 / year')">
+            <div class="imgBox">
+                <img src="images/mbbs.jpg">
+                <span class="badge medical">Medical</span>
+            </div>
+            <div class="details">
+                <h3>MBBS</h3>
+                <p>Doctor Program</p>
+                <button>View Details</button>
+            </div>
+        </div>
+
+        <div class="card" onclick="openPopup('PhD','Doctoral Research Program','3-5 Years','₹70,000 / year')">
+            <div class="imgBox">
+                <img src="images/phd.jpg">
+                <span class="badge phd">Doctorate</span>
+            </div>
+            <div class="details">
+                <h3>Doctor of Philosophy</h3>
+                <p>Research Program</p>
+                <button>View Details</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- POPUP -->
+    <div id="popup" class="popup">
+        <div class="popup-box">
+            <span class="close" onclick="closePopup()">×</span>
+            <h2 id="pTitle"></h2>
+            <p id="pDesc"></p>
+            <p><b>Duration:</b> <span id="pDuration"></span></p>
+            <p><b>Fees:</b> <span id="pFees"></span></p>
+            <a href="admission.html"><button class="apply">Apply Now</button></a>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(title, desc, duration, fees) {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("pTitle").innerText = title;
+            document.getElementById("pDesc").innerText = desc;
+            document.getElementById("pDuration").innerText = duration;
+            document.getElementById("pFees").innerText = fees;
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>
