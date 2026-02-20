@@ -386,6 +386,16 @@
         font-size: 42px;
         margin-bottom: 20px;
       }
+      #typing-text::after {
+        content: "|";
+        animation: blink 0.7s infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
 
       .about-left p {
         font-size: 18px;
@@ -393,7 +403,7 @@
         color: #333;
       }
 
-       /* BUTTONS */
+      /* BUTTONS */
       .buttons {
         margin-top: 30px;
         display: flex;
@@ -413,7 +423,7 @@
 
       .watch::before {
         content: "▶ ";
-      } 
+      }
 
       /* RIGHT IMAGE */
       .about-right {
@@ -424,8 +434,6 @@
         width: 100%;
         border-radius: 10px;
       }
-
-     
     </style>
   </head>
   <body>
@@ -509,7 +517,9 @@
 
       <div class="d" id="d">
         <div
-          class="contact-side-button contact-us-button" id="contactHoverButton">
+          class="contact-side-button contact-us-button"
+          id="contactHoverButton"
+        >
           <span>Contact Us</span>
         </div>
 
@@ -700,6 +710,50 @@
       window.onload = () => {
         animateShapes();
       };
+
+
+
+
+      // animated text typing
+      const texts = [
+        "Build Your Future",
+        "Follow Your passion @Global institute",
+        
+      ];
+
+      let i = 0;
+      let j = 0;
+      let currentText = "";
+      let isDeleting = false;
+
+      function typeEffect() {
+        currentText = texts[i];
+
+        if (!isDeleting) {
+          document.getElementById("typing-text").innerText =
+            currentText.substring(0, j + 1);
+          j++;
+
+          if (j === currentText.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 1000);
+            return;
+          }
+        } else {
+          document.getElementById("typing-text").innerText =
+            currentText.substring(0, j - 1);
+          j--;
+
+          if (j === 0) {
+            isDeleting = false;
+            i = (i + 1) % texts.length;
+          }
+        }
+
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+      }
+
+      typeEffect();
     </script>
   </body>
 </html>
