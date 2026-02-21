@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+    padding: 40px;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* INTRO TOP BOX */
+.top-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.top-box h1 {
+    margin-bottom: 20px;
+}
+
+.top-box p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.small-text {
+    font-size: 14px;
+    font-style: italic;
+    color: #666;
+}
+
+.top-box a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+/* LEFT SIDE */
+
+.left-section {
+    flex: 2;
+}
+
+.box {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+    margin-bottom: 20px;
+}
+
+.use-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.use-content ol {
+    padding-left: 20px;
+}
+
+.use-content li {
+    margin-bottom: 10px;
+}
+
+.use-content img {
+    width: 250px;
+    border-radius: 6px;
+}
+
+/* FAQ */
+
+.faq h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.faq p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* RIGHT SIDE */
+
+.right-box {
+    background: #111827;
+    color: #fff;
+    padding: 25px;
+    flex: 1;
+    border-radius: 6px;
+    height: fit-content;
+    position: sticky;
+    top: 40px;
+}
+
+.right-box h2 {
+    margin-bottom: 15px;
+}
+
+.sub {
+    font-weight: bold;
+}
+
+.sub2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.option-box {
+    background: #ffffff;
+    color: #000;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.option-box h4 {
+    margin-bottom: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #22c55e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+.bottom-text {
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.bottom-text a {
+    color: #60a5fa;
+    text-decoration: none;
+}
