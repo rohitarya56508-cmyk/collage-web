@@ -499,34 +499,70 @@
 //     slider.style.transform = `translateX(-${scrollAmount}px)`;
 // }
 document.addEventListener("DOMContentLoaded", () => {
-
     const slider = document.getElementById("fullsceenSlider");
-    const cards = slider.querySelectorAll(".card");
+    if (!slider) return;
 
+    const originalCards = Array.from(slider.querySelectorAll(".card"));
+    if (originalCards.length === 0) return;
+
+    // Clone all original cards and append them for the infinite loop effect
+    originalCards.forEach(card => {
+        slider.appendChild(card.cloneNode(true));
+    });
+
+    const sliderContainer = slider.parentElement;
     let index = 0;
-    let cardWidth = cards[0].offsetWidth + 20; // gap included
-    let maxIndex = cards.length - Math.floor(slider.parentElement.offsetWidth / cardWidth);
+    let interval;
+    const originalLength = originalCards.length;
 
     function autoSlide() {
+        const sliderStyle = window.getComputedStyle(slider);
+        // Provide a fallback for gap, as it might not be defined if there's only one card.
+        const cardGap = parseFloat(sliderStyle.gap) || 25; 
+        const cardWidth = originalCards[0].offsetWidth + cardGap;
+
+        if (cardWidth === 0) return;
+
         index++;
-
-        if (index > maxIndex) {
-            index = 0;
-        }
-
+        slider.style.transition = 'transform 0.5s ease-in-out';
         slider.style.transform = `translateX(-${index * cardWidth}px)`;
     }
 
-    let interval = setInterval(autoSlide, 3000);
+    // Use transitionend to reset the slider position for a seamless loop
+    function handleTransitionEnd() {
+        if (index >= originalLength) {
+            slider.style.transition = 'none';
+            index = 0;
+            slider.style.transform = `translateX(0px)`;
+        }
+    }
 
-    slider.parentElement.addEventListener("mouseenter", () => {
+    slider.addEventListener('transitionend', handleTransitionEnd);
+
+    interval = setInterval(autoSlide, 3000);
+
+    sliderContainer.addEventListener("mouseenter", () => {
         clearInterval(interval);
     });
 
-    slider.parentElement.addEventListener("mouseleave", () => {
+    sliderContainer.addEventListener("mouseleave", () => {
+        // Clear existing interval to prevent duplicates before setting a new one
+        clearInterval(interval);
         interval = setInterval(autoSlide, 3000);
     });
 
+    window.addEventListener('resize', () => {
+        // On resize, reset to the start to avoid visual glitches
+        clearInterval(interval);
+        slider.style.transition = 'none';
+        index = 0;
+        slider.style.transform = 'translateX(0px)';
+        
+        // Use a small timeout to allow the browser to reflow before restarting
+        setTimeout(() => {
+            interval = setInterval(autoSlide, 3000);
+        }, 100);
+    });
 });
 
 
