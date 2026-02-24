@@ -517,6 +517,47 @@ button:hover {
     .footer-overlay{
         padding:40px 20px;
     }
+
+    /* Mobile Responsive Adjustments */
+    .container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .left-section, .right-box {
+        width: 100%;
+        flex: none;
+    }
+
+    .right-box {
+        position: static;
+        margin-top: 30px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin: 20px 0;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .use-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 
@@ -593,4 +634,3 @@ button:hover {
         display: flex;
         height: 90vh;
       }
-
