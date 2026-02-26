@@ -35,6 +35,10 @@
         <img src="./images/image/logo image.png" alt="Logo" />
       </div>
 
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
       <!-- Menu -->
       <ul class="menu">
         <li><a href="./index.html">Home</a></li>
@@ -42,11 +46,12 @@
         <li><a href="./Pages/courses.html">Courses </a></li>
         <li><a href="./Pages/contact.html">Contact</a></li>
         <li><a href="./Pages/student.html">Student</a></li>
+        <li class="apply-btn-mobile"><a href="./Pages/Apply.html">Apply Now</a></li>
       </ul>
 
       <!-- Button -->
       <div class="apply-btn">
-        <a href="#">Apply Now</a>
+        <a href="./Pages/Apply.html">Apply Now</a>
       </div>
     </nav>
 
@@ -555,6 +560,14 @@
         setTimeout(typeEffect, isDeleting ? 50 : 100);
       }
 
+      // Hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const menu = document.querySelector(".menu");
+
+      hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+
       typeEffect();
 //       let slider = document.getElementById("fullsceenSlider");
 // let scrollAmount = 0;
@@ -642,3 +655,10 @@ document.addEventListener("DOMContentLoaded", () => {
     </script>
   </body>
 </html>
+        
+        
+
+
+
+
+   

@@ -38,13 +38,18 @@
         <img src="../images/image/logo image.png" alt="Logo" />
       </div>
 
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
       <!-- Menu -->
       <ul class="menu">
-        <li><a href="../home.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="./about.html">About </a></li>
         <li><a href="./courses.html">Courses </a></li>
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="./student.html">Student</a></li>
+        <li class="apply-btn-mobile"><a href="./Apply.html">Apply Now</a></li>
       </ul>
 
       <!-- Button -->
@@ -101,5 +106,14 @@
     </div>
 
     <script src="./smallcontact.js"></script>
+    <script>
+      // Hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const menu = document.querySelector(".menu");
+
+      hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
 </body>
 </html>
