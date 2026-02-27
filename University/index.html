@@ -568,6 +568,13 @@
         menu.classList.toggle("active");
       });
 
+      // Close menu when a link is clicked
+      document.querySelectorAll(".menu li a").forEach(link => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("active");
+        });
+      });
+
       typeEffect();
 //       let slider = document.getElementById("fullsceenSlider");
 // let scrollAmount = 0;
