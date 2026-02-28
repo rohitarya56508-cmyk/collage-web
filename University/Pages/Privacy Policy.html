@@ -11,6 +11,35 @@
     <link rel="stylesheet" href="./navbar.css">
     <link rel="stylesheet" href="./smallcontact.css">
     
+    <style>
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .top-box {
+                width: 95%;
+                padding: 15px;
+                box-sizing: border-box;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .left-section {
+                width: 100%;
+            }
+            .box {
+                width: 100%;
+                padding: 15px;
+                box-sizing: border-box;
+            }
+            .use-content img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -49,7 +78,7 @@
         <li><a href="../index.html">Home</a></li>
         <li><a href="./about.html">About </a></li>
         <li><a href="./courses.html">Courses </a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./contact.html">Conatct</a></li>
         <li><a href="./student.html">Student</a></li>
         <li class="apply-btn-mobile"><a href="./Apply.html">Apply Now</a></li>
       </ul>
@@ -254,5 +283,14 @@
     </div>
 </footer>
 
+<script>
+    // Hamburger menu script
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".menu");
+
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+</script>
 </body>
 </html>
